@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Contactanos</title>
+<link rel="stylesheet" href="css/vars.css"/>
+<link rel="stylesheet" href="css/main.css"/>
+<link rel="stylesheet" href="css/contactanos.css"/>
+</head>
+<body>
+
+<div id="cur"></div>
+<div id="curR"></div>
+<canvas id="threeCanvas"></canvas>
+
+<!-- Mini dock -->
+<nav class="dock-bar" id="dockBar" style="bottom:1.5rem;">
+  <span class="dock-logo">Amparta<span>Box</span></span>
+  <div class="dock-sep"></div>
+  <a href="index.html" class="dock-cta" style="display:inline-flex;align-items:center;gap:.4rem;">
+    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+    Volver al inicio
+  </a>
+</nav>
+
+<div class="contact-wrap">
+
+  <!-- Left info -->
+  <aside class="contact-side">
+    <div class="contact-side-tag">Reservas</div>
+    <h1>Reservá tu<br><em>espacio ideal</em><br>en minutos</h1>
+    <p>Nuestro asistente te guía paso a paso. Sin formularios complicados, solo respondé algunas preguntas y listo.</p>
+
+    <div class="side-items">
+      <div class="side-item">
+        <div class="side-ico"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+        <div>
+          <strong>Tres sedes disponibles</strong>
+          <span>Chacabuco · Illia · Humberto Primo</span>
+        </div>
+      </div>
+      <div class="side-item">
+        <div class="side-ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg></div>
+        <div>
+          <strong>Horarios flexibles</strong>
+          <span>Lunes a sábado, 8:00 a 22:00 hs</span>
+        </div>
+      </div>
+      <div class="side-item">
+        <div class="side-ico"><svg viewBox="0 0 24 24"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg></div>
+        <div>
+          <strong>Confirmación inmediata</strong>
+          <span>Recibís tu reserva por email al instante</span>
+        </div>
+      </div>
+      <div class="side-item">
+        <div class="side-ico"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <div>
+          <strong>Sin compromisos</strong>
+          <span>Por hora, día o mes. Cancelás cuando querés</span>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Right chatbot -->
+  <div class="contact-main">
+    <div class="chatwin">
+
+      <div class="chatwin-tb">
+        <div class="mac-dots" style="display:flex;gap:.4rem;">
+          <div class="mac-dot red" style="width:12px;height:12px;border-radius:50%;background:#ff5f57;"></div>
+          <div class="mac-dot yel" style="width:12px;height:12px;border-radius:50%;background:#ffbd2e;"></div>
+          <div class="mac-dot grn" style="width:12px;height:12px;border-radius:50%;background:#28c840;"></div>
+        </div>
+        <div class="chatwin-title">Asistente de reservas · AmpartaBox</div>
+        <div class="chatwin-status">
+          <div class="chatwin-status-dot"></div>
+          En línea
+        </div>
+      </div>
+
+      <div class="chatwin-prog">
+        <div class="chatwin-prog-fill" id="progFill" style="width:0%"></div>
+      </div>
+
+      <div class="chatwin-body" id="chatBody"></div>
+
+      <div class="chatwin-foot">
+        <input type="text" class="chat-in" id="chatIn" placeholder="Escribí tu respuesta..." autocomplete="off"/>
+        <button class="chat-btn" id="chatBtn" onclick="chatSend()">
+          <svg viewBox="0 0 24 24"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="js/three-scene.js"></script>
+<script src="js/main.js"></script>
+<script src="js/chatbot.js"></script>
+</body>
+</html>

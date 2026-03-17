@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>AmpartaBox</title>
+<meta name="description" content="AmpartaBox: espacios de coworking profesionales en Córdoba Capital. Tres sedes, comunidad activa, infraestructura de primer nivel."/>
+<link rel="stylesheet" href="css/vars.css"/>
+<link rel="stylesheet" href="css/main.css"/>
+</head>
+<body>
+
+<div id="cur"></div>
+<div id="curR"></div>
+<canvas id="threeCanvas"></canvas>
+
+<!-- ═══════════════════════════════════════
+     DOCK NAVBAR
+═══════════════════════════════════════ -->
+<nav class="dock-bar" id="dockBar">
+  <span class="dock-logo">Amparta<span>Box</span></span>
+  <div class="dock-links">
+    <a href="#inicio">Inicio</a>
+    <a href="#nosotros">Servicios</a>
+    <a href="#fundador">Fundador</a>
+    <a href="#historia">Historia</a>
+    <a href="#sedes">Sedes</a>
+    <a href="#amenities">Amenities</a>
+  </div>
+  <div class="dock-sep"></div>
+  <a href="contactanos.html" class="dock-cta">Reservar</a>
+  <div class="dock-ham" id="dockHam">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<div class="dock-mobile-menu" id="dockMobile">
+  <a href="#inicio">Inicio</a>
+  <a href="#nosotros">Servicios</a>
+  <a href="#fundador">Fundador</a>
+  <a href="#historia">Historia</a>
+  <a href="#sedes">Sedes</a>
+  <a href="#amenities">Amenities</a>
+  <a href="contactanos.html">Reservar espacio</a>
+</div>
+
+
+<!-- ═══════════════════════════════════════
+     HERO
+═══════════════════════════════════════ -->
+<section id="inicio" class="s-hero">
+<div class="wrap">
+<div class="hero-layout">
+
+  <!-- Copy -->
+  <div class="hero-copy">
+    <div class="hero-eyebrow" data-r data-d="0">
+      <span class="hero-eyebrow-pip"></span>
+      Coworking · Córdoba Capital
+    </div>
+
+    <h1 class="hero-headline" data-r data-d="80">
+      <span class="w1">Tu oficina,</span>
+      <span class="w2">sin ataduras</span>
+      <span class="w3">ni límites.</span>
+    </h1>
+
+    <p class="hero-sub" data-r data-d="160">
+      AmpartaBox es donde los profesionales independientes encuentran el espacio, la infraestructura y la comunidad que necesitan para hacer crecer sus proyectos.
+    </p>
+
+    <div class="hero-actions" data-r data-d="220">
+      <a href="contactanos.html" class="btn-mac btn-mac-fill">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        Reservar un espacio
+      </a>
+      <a href="#nosotros" class="btn-mac btn-mac-ghost">Ver servicios</a>
+    </div>
+
+    <div class="hero-stats" data-r data-d="300">
+      <div class="hstat">
+        <div class="hstat-val" data-count="3" data-suffix="">3</div>
+        <div class="hstat-lbl">Sedes activas</div>
+      </div>
+      <div class="hstat">
+        <div class="hstat-val" data-count="100" data-suffix="+">100+</div>
+        <div class="hstat-lbl">Profesionales</div>
+      </div>
+      <div class="hstat">
+        <div class="hstat-val" data-count="6" data-suffix="">6</div>
+        <div class="hstat-lbl">Años operando</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Windows right -->
+  <div class="hero-windows" data-r data-d="120">
+
+    <!-- Big main window -->
+    <div class="hw-main mac-window">
+      <div class="hw-main-tb">
+        <div class="mac-dots">
+          <div class="mac-dot red"></div>
+          <div class="mac-dot yel"></div>
+          <div class="mac-dot grn"></div>
+        </div>
+        <div class="mac-title">AmpartaBox · Sede Chacabuco</div>
+      </div>
+      <!-- Carousel track -->
+      <div style="position:relative;height:calc(100% - 38px);overflow:hidden;">
+        <div id="hwInner" style="display:flex;height:100%;transition:transform .75s cubic-bezier(.23,1,.32,1);">
+          <div class="c-slide" style="min-width:100%;height:100%;position:relative;flex-shrink:0;">
+            <div class="hw-main-img" style="background-image:url('https://images.unsplash.com/photo-1497366216548-37526070297c?w=900&q=80&fit=crop');position:absolute;inset:0;background-size:cover;background-position:center;"></div>
+            <div class="hw-main-veil" style="position:absolute;inset:0;background:linear-gradient(to top,rgba(10,10,15,.85) 0%,transparent 55%);z-index:1;"></div>
+          </div>
+          <div class="c-slide" style="min-width:100%;height:100%;position:relative;flex-shrink:0;">
+            <div class="hw-main-img" style="background-image:url('https://images.unsplash.com/photo-1556761175-b413da4baf72?w=900&q=80&fit=crop');position:absolute;inset:0;background-size:cover;background-position:center;"></div>
+            <div class="hw-main-veil" style="position:absolute;inset:0;background:linear-gradient(to top,rgba(10,10,15,.85) 0%,transparent 55%);z-index:1;"></div>
+          </div>
+          <div class="c-slide" style="min-width:100%;height:100%;position:relative;flex-shrink:0;">
+            <div class="hw-main-img" style="background-image:url('https://images.unsplash.com/photo-1527192491265-7e15c55b1ed2?w=900&q=80&fit=crop');position:absolute;inset:0;background-size:cover;background-position:center;"></div>
+            <div class="hw-main-veil" style="position:absolute;inset:0;background:linear-gradient(to top,rgba(10,10,15,.85) 0%,transparent 55%);z-index:1;"></div>
+          </div>
+        </div>
+        <!-- Slide infos stacked, shown by JS -->
+        <div class="hw-slide-info" style="transition:opacity .4s,transform .4s;">
+          <div class="hw-slide-tag">Espacios flexibles</div>
+          <h3>Trabajá como<br>lo necesitás</h3>
+          <p>Escritorios y áreas privadas disponibles</p>
+        </div>
+        <!-- Nav -->
+        <div class="hw-slide-nav">
+          <div class="hw-pip on"></div>
+          <div class="hw-pip"></div>
+          <div class="hw-pip"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Floating notification-style widget -->
+    <div class="hw-float">
+      <div class="hw-float-title">Incluido en tu membresía</div>
+      <div class="hw-float-item">
+        <div class="hw-float-ico">
+          <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+        </div>
+        <div class="hw-float-text">
+          <strong>Internet fibra óptica</strong>
+          <span>Sin límite de uso</span>
+        </div>
+      </div>
+      <div class="hw-float-item">
+        <div class="hw-float-ico">
+          <svg viewBox="0 0 24 24"><path d="M18 8h1a4 4 0 010 8h-1"/><path d="M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+        </div>
+        <div class="hw-float-text">
+          <strong>Café y snacks</strong>
+          <span>Todo el día</span>
+        </div>
+      </div>
+      <div class="hw-float-item">
+        <div class="hw-float-ico">
+          <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+        </div>
+        <div class="hw-float-text">
+          <strong>Comunidad activa</strong>
+          <span>100+ profesionales</span>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /hero-windows -->
+
+</div><!-- /hero-layout -->
+</div><!-- /wrap -->
+</section>
+
+
+<!-- ═══════════════════════════════════════
+     ABOUT / SERVICIOS
+═══════════════════════════════════════ -->
+<section id="nosotros" class="s-about">
+<div class="wrap">
+<div class="about-layout">
+
+  <div class="about-sidebar" data-r>
+    <div class="about-sidebar-tag">Servicios</div>
+    <h2>Una nueva forma de <em>trabajar</em></h2>
+    <p>AmpartaBox nació para responder a la creciente comunidad de freelancers y emprendedores cordobeses que necesitaban más que una oficina tradicional.</p>
+    <p>Todo lo que necesitás en un solo lugar, con la flexibilidad que tu trabajo exige.</p>
+    <a href="contactanos.html" class="btn-mac btn-mac-fill" style="margin-top:1.5rem;display:inline-flex;">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      Reservar ahora
+    </a>
+  </div>
+
+  <div class="about-rows">
+    <div class="about-row" data-r data-d="60">
+      <div class="about-row-ico">
+        <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+      </div>
+      <div>
+        <h4>Internet de alta velocidad</h4>
+        <p>Fibra óptica simétrica. Subís y bajás archivos pesados, hacés videollamadas sin cortes ni excusas.</p>
+      </div>
+    </div>
+    <div class="about-row" data-r data-d="110">
+      <div class="about-row-ico">
+        <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+      </div>
+      <div>
+        <h4>Comunidad y networking</h4>
+        <p>Convivís con diseñadores, devs, marketers y emprendedores. Las colaboraciones surgen naturalmente.</p>
+      </div>
+    </div>
+    <div class="about-row" data-r data-d="160">
+      <div class="about-row-ico">
+        <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+      </div>
+      <div>
+        <h4>Salas de reunión equipadas</h4>
+        <p>Pantalla 4K, cámara, audio profesional. Reservables por hora para presentaciones y videollamadas.</p>
+      </div>
+    </div>
+    <div class="about-row" data-r data-d="210">
+      <div class="about-row-ico">
+        <svg viewBox="0 0 24 24"><path d="M18 8h1a4 4 0 010 8h-1"/><path d="M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+      </div>
+      <div>
+        <h4>Café, té y bienestar</h4>
+        <p>Disponibles todo el día. Sillas ergonómicas, buena luz y un ambiente que sostiene jornadas largas.</p>
+      </div>
+    </div>
+    <div class="about-row" data-r data-d="260">
+      <div class="about-row-ico">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+      </div>
+      <div>
+        <h4>Horarios flexibles</h4>
+        <p>Abierto de lunes a sábado de 8 a 22 hs. Modalidades por hora, día o membresía mensual.</p>
+      </div>
+    </div>
+    <div class="about-row" data-r data-d="310">
+      <div class="about-row-ico">
+        <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+      </div>
+      <div>
+        <h4>Ambiente que inspira</h4>
+        <p>Diseño cuidado, iluminación y decoración pensados para estimular la creatividad y el bienestar.</p>
+      </div>
+    </div>
+  </div>
+
+</div>
+</div>
+</section>
+
+
+<!-- ═══════════════════════════════════════
+     FUNDADOR
+═══════════════════════════════════════ -->
+<section id="fundador" class="s-founder">
+<div class="wrap">
+<div class="founder-layout">
+
+  <div class="founder-widget" data-r>
+    <div class="fw-photo">
+      <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=700&q=80&fit=crop&crop=faces,top" alt="Enrique Montalbano"/>
+      <div class="fw-photo-veil"></div>
+    </div>
+    <div class="fw-card">
+      <div class="fw-avatar">EM</div>
+      <div>
+        <div class="fw-name">Enrique Montalbano</div>
+        <div class="fw-role">Fundador de AmpartaBox</div>
+      </div>
+      <div class="fw-badge">Fundador</div>
+    </div>
+  </div>
+
+  <div class="founder-text">
+    <div class="founder-tag" data-r>Quién está detrás</div>
+    <h2 data-r data-d="80">De una casa en<br>Alto Alberdi a <em>tres sedes</em><br>en Córdoba</h2>
+    <p data-r data-d="140">Enrique Montalbano comenzó con una idea simple: abrir las puertas de su casa para que estudiantes y profesionales pudieran trabajar en un ambiente tranquilo. Lo informal se convirtió en algo real.</p>
+    <p data-r data-d="190">Al ver el crecimiento del movimiento freelance en Córdoba, apostó por escalar el modelo y crear un coworking profesional. Hoy AmpartaBox tiene tres sedes y una comunidad que no para de crecer.</p>
+    <div class="founder-quote" data-r data-d="260">
+      "Quería un lugar donde la gente pudiera venir con una idea y irse con un proyecto. Eso es AmpartaBox."
+    </div>
+  </div>
+
+</div>
+</div>
+</section>
+
+
+<!-- ═══════════════════════════════════════
+     TIMELINE (horizontal scroll)
+═══════════════════════════════════════ -->
+<section id="historia" class="s-timeline">
+<div class="wrap">
+  <div class="tl-header" data-r>
+    <div class="tl-header-tag">Historia</div>
+    <h2>El camino de AmpartaBox</h2>
+  </div>
+</div>
+<div class="tl-scroll-wrap">
+  <div class="tl-track">
+
+    <div class="tl-node" data-r data-d="0">
+      <div class="tl-node-dot"></div>
+      <div class="tl-node-card">
+        <div class="tl-node-year">2019 · Origen</div>
+        <h4>El primer espacio</h4>
+        <p>Centro de estudios en casa de Alto Alberdi. Lo informal se convierte en punto de encuentro para profesionales independientes de Córdoba.</p>
+      </div>
+    </div>
+
+    <div class="tl-node" data-r data-d="80">
+      <div class="tl-node-dot"></div>
+      <div class="tl-node-card">
+        <div class="tl-node-year">2021 · Formalización</div>
+        <h4>Nace AmpartaBox</h4>
+        <p>Primera sede profesional en Av. Chacabuco 357. Escritorios compartidos, salas de reunión e infraestructura completa desde el primer día.</p>
+      </div>
+    </div>
+
+    <div class="tl-node" data-r data-d="160">
+      <div class="tl-node-dot"></div>
+      <div class="tl-node-card">
+        <div class="tl-node-year">2023 · Expansión</div>
+        <h4>Segunda sede</h4>
+        <p>Av. Illia 520, Piso 7. En el corazón de la ciudad, con vistas panorámicas y nuevos servicios para una comunidad en crecimiento.</p>
+      </div>
+    </div>
+
+    <div class="tl-node" data-r data-d="240">
+      <div class="tl-node-dot"></div>
+      <div class="tl-node-card">
+        <div class="tl-node-year">2025 · Consolidación</div>
+        <h4>Tercera sede</h4>
+        <p>Av. Humberto Primo, Piso 1. AmpartaBox se consolida como referente del coworking cordobés con una comunidad activa de más de 100 profesionales.</p>
+      </div>
+    </div>
+
+    <div class="tl-node" data-r data-d="320">
+      <div class="tl-node-dot" style="border-color:var(--sky);box-shadow:0 0 10px rgba(64,184,255,.4);"></div>
+      <div class="tl-node-card" style="border-color:var(--sepA);">
+        <div class="tl-node-year">Hoy · En curso</div>
+        <h4>Seguimos creciendo</h4>
+        <p>Nuevos servicios, más comunidad y la misma filosofía: un espacio donde las ideas se convierten en proyectos. El próximo capítulo está siendo escrito.</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+</section>
+
+
+<!-- ═══════════════════════════════════════
+     SEDES
+═══════════════════════════════════════ -->
+<section id="sedes" class="s-locations">
+<div class="wrap">
+
+  <div class="loc-header" data-r>
+    <div class="loc-header-tag">Dónde encontrarnos</div>
+    <h2>Tres espacios en Córdoba Capital</h2>
+    <p>Elegí la sede que más te quede cerca o la que más te inspire.</p>
+  </div>
+
+  <div class="loc-layout">
+
+    <!-- Big card -->
+    <div class="loc-big" data-r data-d="60">
+      <div class="loc-big-img">
+        <div class="loc-big-img-bg" style="background:linear-gradient(135deg,#0a1628 0%,#0d3aa8 100%);"></div>
+        <div class="loc-big-grid"></div>
+        <div class="loc-big-veil"></div>
+        <span class="loc-big-piso">Piso 3</span>
+        <div class="loc-big-pin">
+          <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        </div>
+      </div>
+      <div class="loc-big-body">
+        <div class="loc-num">Sede 01 · Flagship</div>
+        <h3>Av. Chacabuco 357</h3>
+        <p>La primera y la más grande. Ubicada en el microcentro de Córdoba, con acceso fácil desde cualquier punto de la ciudad. Escritorios, áreas privadas y dos salas de reunión.</p>
+        <a href="contactanos.html" class="loc-link">
+          Reservar en esta sede
+          <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- Mini stack -->
+    <div class="loc-stack">
+      <div class="loc-mini" data-r data-d="120">
+        <div class="loc-mini-img">
+          <div class="loc-mini-img-bg" style="background:linear-gradient(135deg,#12003c,#4c0d8c);"></div>
+          <div class="loc-mini-grid"></div>
+        </div>
+        <div class="loc-mini-body">
+          <div class="loc-num">Sede 02 · Premium</div>
+          <h4>Av. Illia 520 — P7</h4>
+          <p>Vistas panorámicas desde el piso 7. El espacio ideal para los que quieren trabajar con perspectiva.</p>
+          <a href="contactanos.html" class="loc-link" style="font-size:.75rem;">
+            Reservar <svg viewBox="0 0 24 24" style="width:10px;height:10px;"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="loc-mini" data-r data-d="200">
+        <div class="loc-mini-img">
+          <div class="loc-mini-img-bg" style="background:linear-gradient(135deg,#002236,#004e6b);"></div>
+          <div class="loc-mini-grid"></div>
+        </div>
+        <div class="loc-mini-body">
+          <div class="loc-num">Sede 03 · Íntima</div>
+          <h4>Av. Humberto Primo — P1</h4>
+          <p>Ambiente cálido y cercano. Para quienes prefieren un entorno más tranquilo y personal.</p>
+          <a href="contactanos.html" class="loc-link" style="font-size:.75rem;">
+            Reservar <svg viewBox="0 0 24 24" style="width:10px;height:10px;"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+</section>
+
+
+<!-- ═══════════════════════════════════════
+     AMENITIES
+═══════════════════════════════════════ -->
+<section id="amenities" class="s-amenities">
+<div class="wrap">
+<div class="am-layout">
+
+  <div class="am-left" data-r>
+    <div class="am-left-tag">Incluido</div>
+    <h2>Todo lo que necesitás, en un lugar</h2>
+    <p>Infraestructura completa pensada para que tu única preocupación sea el trabajo.</p>
+  </div>
+
+  <div class="am-pane mac-window" data-r data-d="80">
+    <div class="am-pane-tb">
+      <div class="mac-dots">
+        <div class="mac-dot red"></div>
+        <div class="mac-dot yel"></div>
+        <div class="mac-dot grn"></div>
+      </div>
+      <div class="mac-title">Preferencias del espacio</div>
+    </div>
+    <div class="am-pane-grid">
+      <div class="am-item">
+        <div class="am-item-ico"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
+        <h5>Internet fibra</h5>
+        <p>Simétrico, sin límite, empresarial</p>
+      </div>
+      <div class="am-item">
+        <div class="am-item-ico"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg></div>
+        <h5>Comunidad</h5>
+        <p>Networking real cada día</p>
+      </div>
+      <div class="am-item">
+        <div class="am-item-ico"><svg viewBox="0 0 24 24"><path d="M18 8h1a4 4 0 010 8h-1"/><path d="M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg></div>
+        <h5>Café todo el día</h5>
+        <p>Café, té y snacks gratis</p>
+      </div>
+      <div class="am-item">
+        <div class="am-item-ico"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div>
+        <h5>Salas de reunión</h5>
+        <p>Pantalla 4K · cámara · audio</p>
+      </div>
+      <div class="am-item">
+        <div class="am-item-ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg></div>
+        <h5>Horarios flex</h5>
+        <p>8 a 22 hs, lunes a sábado</p>
+      </div>
+      <div class="am-item">
+        <div class="am-item-ico"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+        <h5>Ambiente premium</h5>
+        <p>Diseño e iluminación curados</p>
+      </div>
+    </div>
+  </div>
+
+</div>
+</div>
+</section>
+
+
+<!-- ═══════════════════════════════════════
+     CTA
+═══════════════════════════════════════ -->
+<section id="reservar" class="s-cta">
+<div class="wrap">
+  <div class="cta-dialog" data-r>
+    <div class="cta-dialog-tb">
+      <div class="mac-dots">
+        <div class="mac-dot red"></div>
+        <div class="mac-dot yel"></div>
+        <div class="mac-dot grn"></div>
+      </div>
+      <div class="mac-title">ampartabox.com — Reservar espacio</div>
+    </div>
+    <div class="cta-dialog-body">
+      <h2>¿Listo para trabajar en un<br><span>espacio que inspira</span>?</h2>
+      <p>Sin contratos largos ni complicaciones. Reservá tu espacio en minutos y empezá a trabajar en el ambiente que te merece.</p>
+      <div class="cta-btns">
+        <a href="contactanos.html" class="btn-mac btn-mac-fill" style="font-size:.9rem;padding:.8rem 1.8rem;">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          Reservar mi espacio
+        </a>
+        <a href="#sedes" class="btn-mac btn-mac-ghost" style="font-size:.9rem;padding:.8rem 1.8rem;">Ver sedes</a>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+
+<!-- ═══════════════════════════════════════
+     FOOTER
+═══════════════════════════════════════ -->
+<footer class="s-footer">
+<div class="wrap">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="footer-brand-name">Amparta<span>Box</span></div>
+      <p>Espacios de coworking profesionales en Córdoba Capital, diseñados para la nueva forma de trabajar.</p>
+    </div>
+    <div class="footer-col">
+      <h5>Sedes</h5>
+      <p>Av. Chacabuco 357 · P3</p>
+      <p>Av. Illia 520 · P7</p>
+      <p>Av. Humberto Primo · P1</p>
+    </div>
+    <div class="footer-col">
+      <h5>Navegación</h5>
+      <a href="#inicio">Inicio</a>
+      <a href="#nosotros">Servicios</a>
+      <a href="#fundador">Fundador</a>
+      <a href="#historia">Historia</a>
+      <a href="#sedes">Sedes</a>
+    </div>
+    <div class="footer-col">
+      <h5>Contacto</h5>
+      <a href="contactanos.html">Reservar espacio</a>
+      <a href="mailto:info@ampartabox.com">info@ampartabox.com</a>
+      <a href="#">Instagram</a>
+      <a href="#">LinkedIn</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 AmpartaBox · Córdoba, Argentina</p>
+    <span>Ag Studio 2026</span>
+  </div>
+</div>
+</footer>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="js/three-scene.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
