@@ -1,0 +1,122 @@
+/* ══════════════════════════════════════════════════
+   AMPARTABOX 2.0 — vars.css
+   macOS Sequoia-inspired design system
+══════════════════════════════════════════════════ */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300;0,14..32,400;0,14..32,500;0,14..32,600;0,14..32,700;1,14..32,300&display=swap');
+
+:root {
+  /* ── Base palette (macOS dark mode) */
+  --bg:        #0a0a0f;
+  --bg1:       #111118;
+  --bg2:       #16161e;
+  --bg3:       #1c1c26;
+
+  /* ── Blue system (macOS accent) */
+  --accent:    #1d6bff;
+  --accent2:   #0051d5;
+  --accent3:   #003eab;
+  --sky:       #40b8ff;
+  --sky2:      #8ed4ff;
+  --skyD:      #1a8fd4;
+
+  /* ── Text */
+  --t1:        rgba(255,255,255,.95);
+  --t2:        rgba(255,255,255,.65);
+  --t3:        rgba(255,255,255,.38);
+  --t4:        rgba(255,255,255,.18);
+
+  /* ── macOS vibrancy glass layers */
+  --vibrancy:       rgba(28,28,38,.72);
+  --vibrancy-light: rgba(40,40,58,.60);
+  --vibrancy-ultra: rgba(20,20,30,.85);
+  --vibrancy-tint:  rgba(30,60,120,.18);
+  --vibrancy-tint2: rgba(64,184,255,.07);
+
+  /* ── Borders */
+  --sep:       rgba(255,255,255,.08);
+  --sepB:      rgba(255,255,255,.14);
+  --sepA:      rgba(29,107,255,.30);
+
+  /* ── Shadows (macOS-style layered) */
+  --shadow-sm: 0 1px 3px rgba(0,0,0,.35), 0 1px 0 rgba(255,255,255,.04) inset;
+  --shadow-md: 0 4px 16px rgba(0,0,0,.45), 0 1px 0 rgba(255,255,255,.06) inset;
+  --shadow-lg: 0 12px 48px rgba(0,0,0,.55), 0 1px 0 rgba(255,255,255,.07) inset;
+  --shadow-xl: 0 24px 80px rgba(0,0,0,.65), 0 1px 0 rgba(255,255,255,.08) inset;
+  --shadow-a:  0 0 0 1px rgba(29,107,255,.4), 0 8px 32px rgba(29,107,255,.25);
+
+  /* ── Radii (macOS window-inspired) */
+  --r4:  4px;
+  --r8:  8px;
+  --r12: 12px;
+  --r16: 16px;
+  --r20: 20px;
+  --r24: 24px;
+  --r32: 32px;
+
+  /* ── Typography */
+  --f: 'Inter', -apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif;
+
+  /* ── Easing (macOS spring-like) */
+  --spring: cubic-bezier(.34,1.56,.64,1);
+  --ease:   cubic-bezier(.25,.46,.45,.94);
+  --swift:  cubic-bezier(.23,1,.32,1);
+}
+
+/* ── Reset */
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior:smooth; font-size:16px; -webkit-font-smoothing:antialiased; }
+body {
+  font-family: var(--f);
+  background: var(--bg);
+  color: var(--t1);
+  overflow-x: hidden;
+  cursor: none;
+  line-height: 1.5;
+}
+a { text-decoration:none; color:inherit; }
+img { display:block; max-width:100%; }
+ul { list-style:none; }
+::selection { background:rgba(29,107,255,.45); color:#fff; }
+
+/* ── Custom cursor (macOS pointer-inspired) */
+#cur {
+  position:fixed; width:6px; height:6px;
+  background:#fff; border-radius:50%;
+  pointer-events:none; z-index:99999;
+  transform:translate(-50%,-50%);
+  transition:width .15s var(--swift), height .15s var(--swift), opacity .2s;
+}
+#curR {
+  position:fixed; width:24px; height:24px;
+  border:1px solid rgba(255,255,255,.3);
+  border-radius:50%;
+  pointer-events:none; z-index:99998;
+  transform:translate(-50%,-50%);
+  transition:width .25s var(--swift), height .25s var(--swift), border-color .25s;
+}
+.cur-hover #cur  { width:12px; height:12px; background:var(--sky); }
+.cur-hover #curR { width:44px; height:44px; border-color:rgba(64,184,255,.5); }
+
+/* ── Noise grain */
+body::after {
+  content:''; position:fixed; inset:0; pointer-events:none; z-index:9990;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.025'/%3E%3C/svg%3E");
+  opacity:.6;
+}
+
+/* ── Scrollbar (macOS-style) */
+::-webkit-scrollbar { width:3px; }
+::-webkit-scrollbar-track { background:transparent; }
+::-webkit-scrollbar-thumb { background:rgba(255,255,255,.12); border-radius:2px; }
+::-webkit-scrollbar-thumb:hover { background:rgba(255,255,255,.22); }
+
+/* ── Wrap */
+.wrap { max-width:1200px; margin:0 auto; padding:0 2rem; position:relative; z-index:2; }
+
+/* ── Reveal */
+[data-r] {
+  opacity:0; transform:translateY(20px) scale(.99);
+  transition:opacity .6s var(--swift), transform .6s var(--swift);
+}
+[data-r].in { opacity:1; transform:none; }
